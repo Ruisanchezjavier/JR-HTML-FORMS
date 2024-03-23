@@ -5,36 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
  <div class="container">
     <div class="card text-center">
         <div class="card-header fs-1 fw-bold text-start">
-          Payment form example
+          <h3>Payment form example</h3>
         </div>
 
 
 
 
 
-        <div class="card-body">        
+         <div class="card-body text-start">        
             <!-- alert section -->
-            <div class="row1"></div>
+            <div id="warning" class="row mb-3">
+                <div  id="text-warning" class="col-11 bg-danger-10 bg-gradient d-flex p-2 bd-highlight ms-3 rounded">
+                   Some fields are missing
+                </div>
+            </div>
 
             <!-- card cvc and amount section -->
             <div class="row mb-3">
                 <div class="col-5 text-start">
                     <label for="card-number">Card #</label><br>
-                    <input type="text" id="Card-number" name="Card-number" required minlength="16" maxlength="16" size="40" placeholder="xxxxxxxxxxxxxx" />
+                    <input type="text" id="Card-number" name="Card-number" required minlength="16" maxlength="16" size="57" placeholder="xxxxxxxxxxxxxx" />
                 </div>
-                <div class="col-3 text-start">
+                <div class="col-2 text-start ps-0">
                     <label for="cvc-number">cvc #</label><br>
-                    <input type="text" id="cvc-number" name="cvc-number" required minlength="3" maxlength="3" size="15" placeholder="000" />
+                    <input type="text" id="cvc-number" name="cvc-number" required minlength="3" maxlength="3" size="23" placeholder="000" />
                 </div>
                 <div class="col-4 text-start">
                     <label class="ms-3" for="amount">Amount</label><br>
-                   $ <input type="text" id="amount" name="amount" required minlength="16" maxlength="16" size="30" placeholder="Amount"/>
+                   $ <input type="text" id="amount" name="amount" required minlength="16" maxlength="16" size="43" placeholder="Amount"/>
                 </div>
             </div>
 
@@ -42,12 +47,12 @@
             <div class="row">
                 <div class="col-6 text-start">
                     <label for="first-name">First name</label><br>
-                    <input type="text" id="first-name" name="first-name" required minlength="16" maxlength="16" size="50" />
+                    <input type="text" id="first-name" name="first-name" required minlength="16" maxlength="16" size="70" />
                 </div>
 
                 <div class="col-6 text-start">
                     <label for="last-name">Last name</label><br>
-                    <input type="text" id="last-name" name="last-name" required minlength="16" maxlength="16" size="50" />
+                    <input type="text" id="last-name" name="last-name" required minlength="16" maxlength="16" size="71" />
                 </div>
             </div>
 
@@ -55,49 +60,50 @@
             <div class="row">
                 <div class="col-6 text-start">
                     <label for="city">City</label><br>
-                    <input type="text" id="city" name="city" required minlength="16" maxlength="16" size="50" />
+                    <input type="text" id="city" name="city" required minlength="16" maxlength="16" size="70" />
                 </div>
 
                 <div class="col-3 text-start">
-                    <label for="sate">State</label><br>
-                    <input type="text" id="state" name="state" required minlength="3" maxlength="3" size="22" />
+                        <label for="state-select">State</label><br>
+                            <select class="w-100" name="states" id="state-select" >
+                                <option value="">Pick a state</option>
+                                <option value=" FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="SC">South Carolina</option>
+                                
+                            </select>
+                        
                 </div>
 
-                <div class="col-3 text-start">
-                    <label for="postal-code">Postal code</label><br>
-                    <input type="text" id="postal-code" name="postal-code" required minlength="3" maxlength="3" size="23" />
-                </div>
+                    <div class="col-3 text-start">
+                        <label for="postal-code">Postal code</label><br>
+                        <input type="text" id="postal-code" name="postal-code" required minlength="5" maxlength="10" size="33" />
+                    </div>
             </div>
 
             <!-- card type massage -->
-            <div class="row mb-3">
+            <div class="row mb-3 mt-3">
                <div class="col-3 text-start">
                 <label for="card-type">We accept:</label><br>
+                        <div id="iconTable-width" class="col-9 mt-3 bg-secondary rounded  p-1 bd-highlight">
+                            <input type="radio" id="mastercard" name="card-type" value="mastercard" checked />
+                            <label for="card-type"><i class="fa fa-cc-mastercard" style="font-size:24px"></i></label>
 
+                            <input type="radio" id="visa" name="card-type" value="visa" />
+                            <label for="card-type"><i class="fa fa-cc-visa" style="font-size:24px"></i></label>
 
-
-                    <input type="radio" id="mastercard" name="card-type" value="mastercard" checked />
-                    <label for="card-type">MC:</label><br>
-
-                    <input type="radio" id="visa" name="card-type" value="visa" />
-                    <label for="card-type">Visa:</label><br>
-
-                    <input type="radio" id="dinner's-club" name="card-type" value="dinner's-club" />
-                    <label for="card-type">Dinner's club:</label><br>
-
-                    <input type="radio" id="American-express" name="card-type" value="american-express" />
-                    <label for="card-type">American Express:</label><br>
-
+                            <input type="radio" id="dinner's-club" name="card-type" value="dinner's-club" />
+                            <label for="card-type"><i class="fa fa-cc-diners-club" style="font-size:24px"></i></label>
+                            
+                            <input type="radio" id="American-express" name="card-type" value="american-express" />
+                            <label for="card-type"><i class="fa fa-cc-amex" style="font-size:24px"></i></label><br>
+                        </div>
                </div>
-
-
-
-
 
                <div class="col-3"></div>
                <div class="col-6 text-start">
                     <label for="message">Message</label><br>
-                    <textarea id="message" name="message" rows="3" cols="50"></textarea>
+                    <textarea id="message" name="message" rows="3" cols="70"></textarea>
                </div>
             </div>
         </div>

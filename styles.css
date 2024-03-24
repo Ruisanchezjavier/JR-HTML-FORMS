@@ -1,13 +1,38 @@
 #warning{
     margin-left: -15px;
     margin-right: -100px;
+    
 }
 
 #text-warning{
-    
+    height: 42px;
     margin-right: 50px;
+    background-color:rgba(247, 112, 112, 0.529)
+    
+    
 }
 
 #iconTable-width{
     height: 30%;
 }
+
+p{
+    color: rgb(97, 0, 0);
+    margin-left: 10px;
+}
+
+#width-pick-state{
+    height: 29px;
+}
+
+#cvc-margin{
+    
+
+}
+ label{
+    margin-bottom: 5px;
+ }
+
+ .container{
+    margin-top: 50px;
+ }

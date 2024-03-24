@@ -22,8 +22,8 @@
          <div class="card-body text-start">        
             <!-- alert section -->
             <div id="warning" class="row mb-3">
-                <div  id="text-warning" class="col-11 bg-danger-10 bg-gradient d-flex p-2 bd-highlight ms-3 rounded">
-                   Some fields are missing
+                <div  id="text-warning" class="col-11 bg-gradient d-flex p-2 bd-highlight ms-3 rounded">
+                   <p>Some fields are missing</p>
                 </div>
             </div>
 
@@ -31,11 +31,11 @@
             <div class="row mb-3">
                 <div class="col-5 text-start">
                     <label for="card-number">Card #</label><br>
-                    <input type="text" id="Card-number" name="Card-number" required minlength="16" maxlength="16" size="57" placeholder="xxxxxxxxxxxxxx" />
+                    <input type="text" id="Card-number" name="Card-number" required minlength="16" maxlength="16" size="58" placeholder="xxxxxxxxxxxxxx" />
                 </div>
-                <div class="col-2 text-start ps-0">
+                <div id="cvc-margin" class="col-3 text-start  ">
                     <label for="cvc-number">cvc #</label><br>
-                    <input type="text" id="cvc-number" name="cvc-number" required minlength="3" maxlength="3" size="23" placeholder="000" />
+                    <input type="text" id="cvc-number" name="cvc-number" required minlength="3" maxlength="3" size="32" placeholder="000" />
                 </div>
                 <div class="col-4 text-start">
                     <label class="ms-3" for="amount">Amount</label><br>
@@ -44,7 +44,7 @@
             </div>
 
             <!-- first name last name -->
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-6 text-start">
                     <label for="first-name">First name</label><br>
                     <input type="text" id="first-name" name="first-name" required minlength="16" maxlength="16" size="70" />
@@ -65,7 +65,7 @@
 
                 <div class="col-3 text-start">
                         <label for="state-select">State</label><br>
-                            <select class="w-100" name="states" id="state-select" >
+                            <select id="width-pick-state" class="w-100" name="states" id="state-select" >
                                 <option value="">Pick a state</option>
                                 <option value=" FL">Florida</option>
                                 <option value="GA">Georgia</option>
@@ -82,21 +82,21 @@
             </div>
 
             <!-- card type massage -->
-            <div class="row mb-3 mt-3">
+            <div class="row  mt-3">
                <div class="col-3 text-start">
                 <label for="card-type">We accept:</label><br>
-                        <div id="iconTable-width" class="col-9 mt-3 bg-secondary rounded  p-1 bd-highlight">
+                        <div id="iconTable-width" class="col-9 mt-2 bg-secondary rounded  p-1 bd-highlight d-block">
                             <input type="radio" id="mastercard" name="card-type" value="mastercard" checked />
-                            <label for="card-type"><i class="fa fa-cc-mastercard" style="font-size:24px"></i></label>
+                            <label for="card-type"><img src="payment icon/mastercard.png"></label>
 
                             <input type="radio" id="visa" name="card-type" value="visa" />
-                            <label for="card-type"><i class="fa fa-cc-visa" style="font-size:24px"></i></label>
+                            <label for="card-type"><img src="payment icon/visa.png"></label>
 
                             <input type="radio" id="dinner's-club" name="card-type" value="dinner's-club" />
-                            <label for="card-type"><i class="fa fa-cc-diners-club" style="font-size:24px"></i></label>
+                            <label for="card-type"><img src="payment icon/dinner.png"></label>
                             
                             <input type="radio" id="American-express" name="card-type" value="american-express" />
-                            <label for="card-type"><i class="fa fa-cc-amex" style="font-size:24px"></i></label><br>
+                            <label for="card-type"><img src="payment icon/american.png"></label><br>
                         </div>
                </div>
 
@@ -105,6 +105,11 @@
                     <label for="message">Message</label><br>
                     <textarea id="message" name="message" rows="3" cols="70"></textarea>
                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">Add ane notes here.</div>
             </div>
         </div>
 
